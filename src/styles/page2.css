@@ -1,0 +1,135 @@
+.pg2-button {
+    color: #fff;
+    background-color: blue;
+    margin: 10;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 1.2rem 2.0rem;
+
+    overflow: hidden;
+    position: relative;
+}
+.button1:before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 255, 157);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform-origin: bottom left;
+    transform: translateX(-20rem);
+    transition: transform 0.6s ease-out;
+}
+
+.button1:hover {
+    color: white;
+    background-color: transparent;
+}
+
+.button1:hover:before {
+    transform: translate(0);
+    
+}
+
+.button2:before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 255, 157);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform-origin: bottom left;
+    transform: translateY(-20rem);
+    transition: transform 0.3s ease-out;
+}
+
+.button2:hover {
+    color: white;
+    background-color: transparent;
+}
+
+.button2:hover:before {
+    transform: translate(0);
+}
+
+.button3:hover { 
+    transform: translateY(20rem) scale(0.1);
+    color: white;
+    background-color: chocolate;
+    transition: transform 1.3s ease-out;
+}
+
+.profile {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    cursor: crosshair;
+}
+
+.profile-text {
+    width: 400px;
+    height: 400px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 80px;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+
+.profile-button {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 7px 14px;
+    background: #000;
+    box-shadow: 0 0 5px #000;
+    transform: (0);
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+
+.profile-img {
+    width: 100%;
+    object-fit: contain;
+    transform: scale(0.8);
+    transition: all 0.7s ease-in-out;
+}
+
+.profile-text h3 {
+    font-size: 2.2rem;
+    transform: scale(0);
+    color: #333;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+
+.profile:hover img {
+    transform: scale(10);
+    opacity: 0;
+}
+
+.profile:hover .profile-text {
+    opacity: 1;
+}
+
+.profile:hover h3, .profile:hover 
+.profile-button {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.profile-button:hover {
+    background-color: white;
+    color: black;
+}
